@@ -16,7 +16,20 @@ class TestFindSum(unittest.TestCase):
             return
 
         self.fail()
-        
+
+    def test_simple(self) -> None:
+        x, y = find_sum([3, 2, 4], 6)
+
+        if x == 1:
+            self.assertEqual(y, 2)
+            return
+
+        if x == 2:
+            self.assertEqual(y, 1)
+            return
+
+        self.fail()
+
     def test_negative(self) -> None:
         x, y = find_sum([-1, -2, -3, -4, -5], -8)
 
@@ -29,7 +42,7 @@ class TestFindSum(unittest.TestCase):
             return
 
         self.fail()
-        
+
     def test_mixed(self) -> None:
         x, y = find_sum([-1, 2, -3, 4, -6], 3)
 
@@ -42,7 +55,7 @@ class TestFindSum(unittest.TestCase):
             return
 
         self.fail()
-        
+
     def test_uniform(self) -> None:
         x, y = find_sum([3, 3], 6)
 
