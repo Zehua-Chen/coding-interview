@@ -9,7 +9,7 @@ class ListNode:
         self.next = None  # type: Optional[ListNode]
 
     @staticmethod
-    def make_list(number: int) -> ListNode:
+    def make_list(number: int) -> "ListNode":
         s = str(number)
         i = len(s) - 1
         curent = None
@@ -57,7 +57,7 @@ class ListNode:
 
         return self._compare(other_list)
 
-    def _compare(self, other: ListNode) -> bool:
+    def _compare(self, other: "ListNode") -> bool:
         self_current = self  # type: Optional[ListNode]
         other_current = other  # type: Optional[ListNode]
 
