@@ -17,7 +17,7 @@ class TestFindSum(unittest.TestCase):
 
         self.fail()
 
-    def test_simple(self) -> None:
+    def test_simple2(self) -> None:
         x, y = find_sum([3, 2, 4], 6)
 
         if x == 1:
