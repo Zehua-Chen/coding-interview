@@ -1,10 +1,15 @@
+from typing import Optional
 
 
 # Definition for singly-linked list.
 class ListNode:
 
+    def __init__(self, x: int=0) -> None:
+        self.val = x
+        self.next = None  # type: Optional[ListNode]
+
     @staticmethod
-    def make_list(number: int):
+    def make_list(number: int) -> ListNode:
         s = str(number)
         i = len(s) - 1
         curent = None
@@ -22,14 +27,13 @@ class ListNode:
 
             i -= 1
 
+        assert current is not None
+        assert head is not None
+
         return head
 
-    def __init__(self, x=0):
-        self.val = x
-        self.next = None
-
-    def __str__(self):
-        node = self
+    def __str__(self) -> str:
+        node = self  # type: Optional[ListNode]
         buffer = ""
 
         while node is not None:
@@ -42,19 +46,20 @@ class ListNode:
 
         return buffer
 
-    def __eq__(self, other):
-        t = type(other)
+    def __eq__(self, other: object) -> bool:
         other_list = None
-        if t is int:
+        if isinstance(other, int):
             other_list = ListNode.make_list(other)
-        elif t is ListNode:
+        elif isinstance(other, ListNode):
             other_list = other
+
+        assert other_list is not None
 
         return self._compare(other_list)
 
-    def _compare(self, other):
-        self_current = self
-        other_current = other
+    def _compare(self, other: ListNode) -> bool:
+        self_current = self  # type: Optional[ListNode]
+        other_current = other  # type: Optional[ListNode]
 
         while True:
             if self_current is not None and other_current is not None:
@@ -71,4 +76,50 @@ class ListNode:
 
 
 def add_two_nums(l1: ListNode, l2: ListNode) -> ListNode:
-    return ListNode()
+    head = None
+    cursor = None
+
+    l1_current = l1  # type: Optional[ListNode]
+    l2_current = l2  # type: Optional[ListNode]
+    carried = 0
+
+    while l1_current is not None or l2_current is not None:
+        l1_current_val = 0
+        l2_current_val = 0
+
+        if l1_current is not None:
+            l1_current_val = l1_current.val
+
+        if l2_current is not None:
+            l2_current_val = l2_current.val
+
+        val = l1_current_val + l2_current_val + carried
+
+        if val >= 10:
+            val -= 10
+            carried = 1
+        else:
+            # breakpoint()
+            carried = 0
+
+        if head is None:
+            head = ListNode(val)
+            cursor = head
+        else:
+            cursor.next = ListNode(val)
+            cursor = cursor.next
+
+        if l1_current is not None:
+            l1_current = l1_current.next
+
+        if l2_current is not None:
+            l2_current = l2_current.next
+
+    # Handle overflow
+    if carried > 0:
+        assert cursor is not None
+        cursor.next = ListNode(carried)
+
+    assert head is not None
+
+    return head
