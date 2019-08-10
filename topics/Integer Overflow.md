@@ -1,3 +1,10 @@
+# Integer Overflow
+
+- max of int of x bits: `(2 ** (x - 1)) - 1`
+- min of int of x bits: `(2 ** (x - 1)) * -1`
+
+## How to Detect Overflow in C++
+
 ````cpp
 #include <iostream>
 
