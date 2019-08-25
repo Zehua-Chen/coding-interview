@@ -2,16 +2,25 @@ from typing import List
 
 
 def max_area(height: List[int]) -> int:
+    head_i = 0
+    tail_i = len(height) - 1
     max_area = 0
 
-    for first_i, first_v in enumerate(height):
-        for second_i, second_v in enumerate(height):
-            w = second_i - first_i
-            h = first_v if first_v < second_v else second_v
+    while head_i != tail_i:
+        head_h = height[head_i]
+        tail_h = height[tail_i]
 
-            area = w * h
+        h = head_h if head_h < tail_h else tail_h
+        w = tail_i - head_i
 
-            if max_area < area:
-                max_area = area
+        area = h * w
+
+        if max_area < area:
+            max_area = area
+
+        if head_h > tail_h:
+            tail_i -= 1
+        else:
+            head_i += 1
 
     return max_area
