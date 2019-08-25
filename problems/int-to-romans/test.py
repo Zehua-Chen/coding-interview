@@ -10,5 +10,9 @@ class IntToRomansTest(unittest.TestCase):
         self.assertEqual(convert(58), "LVIII")
         self.assertEqual(convert(1994), "MCMXCIV")
 
+    def test_edge(self):
+        self.assertEqual(convert(1), "I")
+        self.assertEqual(convert(3999), "MMMCMXCIX")
+
 if __name__ == "__main__":
     unittest.main()
