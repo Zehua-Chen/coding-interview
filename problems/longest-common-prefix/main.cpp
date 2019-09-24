@@ -23,10 +23,13 @@ void TestStrings(initializer_list<string> strs)
     Solution solution;
     vector<string> input{ strs };
 
-    cout << "output" << solution.longestCommonPrefix(input) << endl;
+    string output = solution.longestCommonPrefix(input);
+
+    cout << "output: " << output << "(" << output.size() << ")" << endl;
 }
 
 int main()
 {
-    TestStrings({ "flower","flow","flight" });
+    TestStrings({ "flower", "flow", "flight" });
+    TestStrings({ "dog", "racecar", "car" });
 }
