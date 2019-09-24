@@ -2,6 +2,7 @@
 #include <iostream>
 #include <set>
 #include <unordered_map>
+#include <algorithm>
 
 using std::cout;
 using std::endl;
@@ -12,72 +13,36 @@ using std::vector;
 
 vector<vector<int>> Solution::threeSum(vector<int> &nums)
 {
-    // number: occurances
-    unordered_map<int, int> record;
+    std::sort(nums.begin(), nums.end());
+    vector<vector<int>> solution;
 
-    for (const auto &num: nums)
+    for (size_t i = 0; i < nums.size(); i++)
     {
-        auto found = record.find(num);
+        if (i != 0 && nums[i] == nums[i - 1]) continue;
 
-        if (found == record.end())
+        int j = i + 1;
+        int k = nums.size() - 1;
+
+        while (j < k)
         {
-            record[num] = 1;
-            continue;
-        }
+            if (nums[i] + nums[j] + nums[k] == 0)
+            {
+                solution.push_back({ nums[i], nums[j], nums[k] });
+                ++j;
 
-        record[num]++;
+                // never let j refer to the same thing twice
+                while (j < k && nums[j] == nums[j - 1]) ++j;
+            }
+            else if (nums[i] + nums[j] + nums[k] < 0)
+            {
+                ++j;
+            }
+            else
+            {
+                --k;
+            }
+        }
     }
 
-    size_t i = 0;
-    vector<vector<int>> solutions;
-
-    while (record.size() >= 3)
-    {
-        vector<int> solution;
-        auto begin = record.begin();
-
-        solution.push_back(begin->first);
-        --begin->second;
-
-        if (begin->second == 0)
-        {
-            record.erase(begin);
-        }
-
-        for (auto &pair: record)
-        {
-            int second = pair.first;
-            int secondCount = pair.second - 1;
-
-            int expectedThird = 0 - solution[0] - second;
-
-            if (expectedThird == second && secondCount == 0)
-            {
-                continue;
-            }
-
-            if (record.find(expectedThird) == record.end())
-            {
-                break;
-            }
-
-            solution.push_back(second);
-            solution.push_back(expectedThird);
-
-            break;
-        }
-
-        // remove from dict
-        record.erase(solution[1]);
-        record.erase(solution[2]);
-
-        if (solution.size() != 3)
-        {
-            continue;
-        }
-
-        solutions.push_back(std::move(solution));
-    }
-
-    return solutions;
+    return solution;
 }

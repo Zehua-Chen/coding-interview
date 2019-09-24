@@ -3,3 +3,4 @@
 ## Review Priority
 
 - Longest Palindromic Substring
+- 3 Sum

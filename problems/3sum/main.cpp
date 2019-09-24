@@ -25,7 +25,7 @@ void TestStrings(initializer_list<int> numbers)
 
     vector<vector<int>> output = solution.threeSum(input);
 
-    cout << "output: ";
+    cout << "output: " << endl;
 
     for (const auto &pair : output)
     {

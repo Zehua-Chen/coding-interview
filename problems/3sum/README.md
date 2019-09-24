@@ -19,3 +19,8 @@ A solution set is:
   [-1, -1, 2]
 ]
 ```
+
+## Solution
+
+Source: [FizzBuzzed](https://fizzbuzzed.com/top-interview-questions-1/)
+
