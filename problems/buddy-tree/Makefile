@@ -6,10 +6,10 @@ all: bin test
 bin:
 	mkdir bin
 
-bin/Tree.o: Tree.cpp Tree.hpp
+bin/Tree.o: Tree.cc Tree.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-bin/main.o: main.cpp Tree.hpp
+bin/main.o: main.cc Tree.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 test: bin/main.o bin/Tree.o

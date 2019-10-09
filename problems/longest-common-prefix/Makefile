@@ -6,10 +6,10 @@ all: bin test
 bin:
 	mkdir bin
 
-bin/Solution.o: Solution.cpp Solution.hpp
+bin/Solution.o: Solution.cc Solution.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-bin/main.o: main.cpp Solution.hpp
+bin/main.o: main.cc Solution.h
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 test: bin/main.o bin/Solution.o
