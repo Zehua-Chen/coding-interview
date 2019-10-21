@@ -1,6 +1,6 @@
 #include <initializer_list>
 #include <iostream>
-#include "Tree.h"
+#include "tree.h"
 
 using std::cout;
 using std::endl;

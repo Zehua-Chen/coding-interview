@@ -1,18 +1,18 @@
 LD = clang++
 CXXFLAGS = -std=c++11
 
-all: bin test
+all: test
 
-bin:
+bin/:
 	mkdir bin
 
-bin/Tree.o: Tree.cc Tree.h
+bin/tree.o: tree.cc tree.h bin/
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-bin/main.o: main.cc Tree.h
+bin/main.o: main.cc tree.h bin/
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-test: bin/main.o bin/Tree.o
+test: bin/main.o bin/tree.o
 	$(LD) $+ -o $@
 
 .PHONY: clean
