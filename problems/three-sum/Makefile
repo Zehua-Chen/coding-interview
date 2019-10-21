@@ -1,18 +1,18 @@
 LD = clang++
 CXXFLAGS = -std=c++11
 
-all: bin test
+all: test
 
 bin:
 	mkdir bin
 
-bin/Solution.o: Solution.cpp Solution.hpp
+bin/solution.o: solution.cc solution.h bin/
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-bin/main.o: main.cpp Solution.hpp
+bin/main.o: main.cc solution.h bin/
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-test: bin/main.o bin/Solution.o
+test: bin/main.o bin/solution.o
 	$(LD) $+ -o $@
 
 .PHONY: clean
