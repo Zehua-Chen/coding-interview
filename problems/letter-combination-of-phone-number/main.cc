@@ -3,10 +3,14 @@
 
 using std::cout;
 using std::endl;
-using std::vector;
 using std::string;
+using std::vector;
 
 std::ostream &operator<<(std::ostream &out, const vector<string> &vec) {
+  if (vec.empty()) {
+    return out;
+  }
+
   auto i = vec.begin();
   auto last = std::prev(vec.end());
 
@@ -20,7 +24,7 @@ std::ostream &operator<<(std::ostream &out, const vector<string> &vec) {
 }
 
 int main() {
-  vector<string> output = { "a", "b" };
-  cout << output << endl;
+  Solution solution;
+  cout << solution.LetterCombinations("22") << endl;
   return 0;
 }
