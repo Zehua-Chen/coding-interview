@@ -1,5 +1,6 @@
 LD = clang++
-CXXFLAGS = -std=c++11
+LDFLAGS = -fsanitize=address
+CXXFLAGS = -std=c++11 -fsanitize=address
 
 all: test
 
@@ -13,7 +14,7 @@ bin/main.o: main.cc solution.h | bin/
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 test: bin/main.o bin/solution.o
-	$(LD) $+ -o $@
+	$(LD) $(LDFLAGS) $+  -o $@
 
 .PHONY: clean
 
