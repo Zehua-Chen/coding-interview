@@ -1,6 +1,6 @@
 LD = clang++
-LDFLAGS = -fsanitize=address
-CXXFLAGS = -std=c++11
+LDFLAGS =
+CXXFLAGS = -std=c++11 -g
 
 all: test
 

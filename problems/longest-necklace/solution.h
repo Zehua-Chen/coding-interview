@@ -2,4 +2,4 @@
 
 #include <vector>
 
-size_t LongestNecklace(std::vector<size_t> beads);
+size_t LongestNecklace(const std::vector<size_t> &beads);
