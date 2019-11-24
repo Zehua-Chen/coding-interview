@@ -44,6 +44,7 @@ Output:
 ```
 true
 ```
+
 Explanation: '*' means zero or more of the preceding element, 'a'.
 Therefore, by repeating 'a' once, it becomes "aa".
 
