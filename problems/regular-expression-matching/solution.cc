@@ -1,104 +1,66 @@
 #include "solution.h"
+#include <algorithm>
+#include <iostream>
 
 using std::string;
 
-enum class PatternType {
-  // a
-  kFixed,
-  // .
-  kAny,
-  // a*
-  kMany
+struct Range {
+  struct Iterator {
+    size_t value;
+
+    bool operator!=(const Iterator &other) const {
+      return this->value != other.value;
+    }
+
+    size_t operator*() const { return this->value; }
+
+    Iterator &operator++() {
+      ++this->value;
+      return *this;
+    }
+  };
+
+  size_t begin_value;
+  size_t end_value;
+
+  Range(size_t begin, size_t end) : begin_value(begin), end_value(end) {}
+  Iterator begin() const { return Iterator{begin_value}; }
+  Iterator end() const { return Iterator{end_value}; }
 };
 
-static PatternType GetPatternType(
-    const string::const_iterator &i,
-    const string::const_iterator &end) {
+static bool _IsMatchRecursive(const string &s, const string &p, size_t s_i,
+                              size_t p_i, char prev) {
 
-  if (*i == '.') {
-    return PatternType::kAny;
+  if (s_i > s.length() && p_i > p.length()) {
+    return true;
   }
 
-  const auto next = std::next(i);
-
-  if (next != end) {
-    if (*next == '*') {
-      return PatternType::kMany;
-    }
+  if (s_i > s.length() || p_i > p.length()) {
+    return false;
   }
 
-  return PatternType::kFixed;
+  char s_c = s[s_i];
+  char p_c = p[p_i];
+
+  if (p_c == '*') {
+    Range range{s_i, s.length()};
+    return std::any_of(range.begin(), range.end(), [=](size_t index) {
+      std::cout << "index = " << index << std::endl;
+      return _IsMatchRecursive(s, p, index, p_i, prev);
+    });
+  }
+
+  if (p_c == '.') {
+    return _IsMatchRecursive(s, p, s_i + 1, p_i + 1, p[p_i]);
+  }
+
+  if (s_c == p_c) {
+    return _IsMatchRecursive(s, p, s_i + 1, p_i + 1, p[p_i]);
+  }
+
+  return false;
 }
 
-static void PatternIterAdvance(
-    string::const_iterator &i,
-    const string::const_iterator &end,
-    const PatternType &type) {
-
-  switch (type) {
-    case PatternType::kAny:
-    case PatternType::kFixed:
-      ++i;
-      break;
-    case PatternType::kMany:
-      std::advance(i, 2);
-      break;
-  }
-}
-
-bool IsMatch(const std::string &s, const std::string &p) {
-  auto p_begin = p.begin();
-  auto p_end = p.end();
-
-  auto s_begin = s.begin();
-  auto s_end = s.end();
-
-  PatternType type;
-
-  while (p_begin != p_end) {
-    if (s_begin == s_end) {
-
-      if (type == PatternType::kMany) {
-        auto s_last = std::prev(s_end);
-
-        if (*s_last != *p_begin) {
-          return false;
-        }
-
-        ++p_begin;
-
-        return p_begin == p_end;
-      }
-
-      return false;
-    }
-
-    type = GetPatternType(p_begin, p_end);
-
-    switch (type) {
-      case PatternType::kFixed:
-        if (*s_begin != *p_begin) {
-          return false;
-        }
-
-        ++s_begin;
-        break;
-      case PatternType::kAny:
-        ++s_begin;
-        break;
-      case PatternType::kMany: {
-        const char expect_letter = *p_begin;
-
-        while (*s_begin == expect_letter) {
-          ++s_begin;
-        }
-
-        break;
-      }
-    }
-
-    PatternIterAdvance(p_begin, p_end, type);
-  }
-
-  return s_begin == s_end;
+bool IsMatchRecursive(string s, string p) {
+  return _IsMatchRecursive(s, p, 0, 0, 0);
 }

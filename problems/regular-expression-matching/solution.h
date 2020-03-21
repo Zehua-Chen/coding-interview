@@ -2,4 +2,9 @@
 
 #include <string>
 
-bool IsMatch(const std::string &s, const std::string &p);
+/**
+ * Perform recursive match
+ * @param s: string
+ * @param p: pattern
+ */
+bool IsMatchRecursive(std::string s, std::string p);
