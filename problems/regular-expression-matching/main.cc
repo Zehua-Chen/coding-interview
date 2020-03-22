@@ -24,11 +24,11 @@ int main() {
   Test("aa", "aa", true);
   Test("aa", "a.", true);
   Test("aa", "..", true);
-  // Test("aa", "a*", true);
-  // Test("ab", ".*", true);
-  // Test("aab", "c*a*b", true);
-  // Test("mississippi", "mis*is*p*.", false);
-  // Test("aaa", "a*a", true);
+  Test("aa", "a*", true);
+  Test("ab", ".*", true);
+  Test("aab", "c*a*b", true);
+  Test("mississippi", "mis*is*p*.", false);
+  Test("aaa", "a*a", true);
 
   return 0;
 }

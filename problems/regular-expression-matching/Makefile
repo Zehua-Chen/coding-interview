@@ -1,5 +1,6 @@
 LD = clang++
 LDFLAGS =
+CXX = clang++
 CXXFLAGS = -std=c++14 -g
 
 all: test
