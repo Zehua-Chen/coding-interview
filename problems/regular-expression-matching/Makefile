@@ -1,7 +1,7 @@
 LD = clang++
 LDFLAGS =
 CXX = clang++
-CXXFLAGS = -std=c++14 -g
+CXXFLAGS = -std=c++14
 
 all: test
 
@@ -21,3 +21,4 @@ test: bin/main.o bin/solution.o
 
 clean:
 	rm -rf bin
+	rm -f test
