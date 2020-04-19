@@ -1,0 +1,5 @@
+rootProject.name = 'coding-interview'
+
+include "merge-k-sorted-list"
+
+project(":merge-k-sorted-list").projectDir = new File("problems/merge-k-sorted-list")
