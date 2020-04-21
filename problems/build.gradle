@@ -1,9 +1,3 @@
 allprojects {
   apply plugin: 'java'
 }
-
-project(":swap-nodes-pairs") {
-  dependencies {
-    implementation project(':utils')
-  }
-}
