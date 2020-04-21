@@ -1,4 +1,4 @@
-package utils;
+package utils.directed;
 
 public class ListNode {
   public int val;
