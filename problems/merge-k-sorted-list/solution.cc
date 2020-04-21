@@ -1,4 +1,8 @@
 #include "solution.h"
+#include <iostream>
+
+using std::cout;
+using std::endl;
 
 using std::initializer_list;
 using std::ostream;
@@ -52,6 +56,11 @@ ListNode *ListNode::Create(initializer_list<int> values) {
 }
 
 ostream &operator<<(ostream &out, const ListNode *node) {
+  if (!node) {
+    out << "null";
+    return out;
+  }
+
   const ListNode *subroot = node;
 
   while (subroot) {
@@ -64,4 +73,58 @@ ostream &operator<<(ostream &out, const ListNode *node) {
   return out;
 }
 
-ListNode *Solution::mergeKLists(vector<ListNode *> &lists) { return nullptr; }
+static ListNode *FindSmallest(vector<ListNode *> &lists) {
+  size_t smallest_i = lists.size();
+
+  for (size_t i = 0; i < lists.size(); ++i) {
+    if (lists[i]) {
+      smallest_i = i;
+      break;
+    }
+  }
+
+  for (size_t i = 0; i < lists.size(); ++i) {
+    ListNode *list = lists[i];
+
+    if (!list) {
+      continue;
+    }
+
+    if (list->val < lists[smallest_i]->val) {
+      smallest_i = i;
+    }
+  }
+
+  if (smallest_i >= lists.size()) {
+    return nullptr;
+  }
+
+  ListNode *output = lists[smallest_i];
+
+  if (!output) {
+    return nullptr;
+  }
+
+  lists[smallest_i] = output->next;
+  output->next = nullptr;
+
+  return output;
+}
+
+ListNode *Solution::mergeKLists(vector<ListNode *> &lists) {
+  if (lists.empty()) {
+    return nullptr;
+  }
+
+  ListNode *root = FindSmallest(lists);
+  ListNode *prev = root;
+
+  ListNode *smallest;
+
+  while ((smallest = FindSmallest(lists))) {
+    prev->next = smallest;
+    prev = smallest;
+  }
+
+  return root;
+}
