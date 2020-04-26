@@ -1,6 +1,6 @@
 #include <initializer_list>
 #include <iostream>
-#include "Solution.h"
+#include "solution.h"
 
 using std::cout;
 using std::endl;

@@ -1,4 +1,4 @@
-#include "Solution.h"
+#include "solution.h"
 
 using std::string;
 using std::vector;
