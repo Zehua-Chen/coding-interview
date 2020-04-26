@@ -1,10 +1,8 @@
 # Set
 
-## Operations
+## Retrieve An Arbitrary Element
 
-### Retrieve An Arbitrary Element
-
-#### C#
+### C#
 
 ```cs
 using System.Ling;
@@ -12,13 +10,13 @@ using System.Ling;
 var element = set.First();
 ```
 
-#### Python 3
+### Python 3
 
 ```python
 element = next(iter(some_set))
 ```
 
-#### C++
+### C++
 
 ```cpp
 auto element = *set.begin();
