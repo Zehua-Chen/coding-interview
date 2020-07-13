@@ -1,0 +1,11 @@
+plugins {
+  id 'application'
+}
+
+application {
+  mainClassName = "Program"
+}
+
+dependencies {
+  implementation project(":utils")
+}
