@@ -1,6 +1,7 @@
 include ":utils"
 project(":utils").projectDir = new File("../shared/java/utils")
 
+include ":001-two-sum"
 include ":024-swap-nodes-pairs"
 include ":025-reverse-nodes-k"
 include ":026-remove-duplicates-from-sorted"
