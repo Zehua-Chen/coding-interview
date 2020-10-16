@@ -1,6 +1,6 @@
 # Set
 
-## Retrieve An Arbitrary Element
+## Get First Element
 
 ### C#
 
