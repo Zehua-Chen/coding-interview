@@ -20,3 +20,7 @@ Provided by Leet Code
 3,2,1 → 1,2,3
 1,1,5 → 1,5,1
 ```
+
+## Notes
+
+Basically, we are looking for the number that is the minimum bigger number for a given number
