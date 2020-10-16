@@ -10,3 +10,5 @@ include ":028-strStr"
 include ":029-divide-two-ints"
 include ":030-substr-with-concat-all-words"
 include ":031-next-permutation"
+include ":032-longest-valid-parentheses"
+

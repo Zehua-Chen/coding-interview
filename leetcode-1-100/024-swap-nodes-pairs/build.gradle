@@ -1,11 +1,11 @@
 plugins {
-  id 'application'
+    id 'application'
 }
 
 application {
-  mainClassName = "Program"
+    mainClassName = "Program"
 }
 
 dependencies {
-  implementation project(":utils")
+    implementation project(":utils")
 }
