@@ -11,6 +11,8 @@ public class Program {
     }
 
     public static void main(String[] args) {
+        test("()", 2);
+        test("(())(", 4);
         test("(()", 2);
         test(")()())", 4);
         test("", 0);

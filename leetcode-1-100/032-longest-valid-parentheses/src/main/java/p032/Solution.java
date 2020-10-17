@@ -1,12 +1,10 @@
 package p032;
 
 public class Solution {
-    private int longest(String s, int location, int depth, int length) {
+    private int longest(String s, int location, int depth) {
         if (location == s.length()) {
-            return depth == 0 ? length : 0;
+            return depth == 0 ? 0 : -1;
         }
-
-        length += 1;
 
         if (s.charAt(location) == '(') {
             depth += 1;
@@ -19,17 +17,29 @@ public class Solution {
         }
 
         if (depth > 0) {
-            return longest(s, location + 1, depth, length);
+            int length = longest(s, location + 1, depth);
+
+            if (length == -1) {
+                return -1;
+            }
+
+            return length + 1;
         }
 
-        return longest(s, location + 1, 0, 0) + length;
+        int length = longest(s, location + 1, 0);
+
+        if (length == -1) {
+            return 1;
+        }
+
+        return length + 1;
     }
 
     public int longestValidParentheses(String s) {
         int best = 0;
 
         for (int i = 0; i < s.length(); i++) {
-            int child = longest(s, i, 0, 0);
+            int child = longest(s, i, 0);
 
             if (child > best) {
                 best = child;
