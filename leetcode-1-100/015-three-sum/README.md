@@ -20,7 +20,7 @@ A solution set is:
 ]
 ```
 
-## Solution
+## p032.Solution
 
 Source: [FizzBuzzed](https://fizzbuzzed.com/top-interview-questions-1/)
 

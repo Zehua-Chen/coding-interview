@@ -1,10 +1,12 @@
+package p032;
+
 public class Program {
     public static void test(String s, int expected) {
         var solution = new Solution();
         int actual = solution.longestValidParentheses(s);
 
         if (actual != expected) {
-            System.out.printf("for string = %s, expected = %d, actual = %d", s, expected, actual);
+            System.out.printf("for string = %s, expected = %d, actual = %d\n", s, expected, actual);
         }
     }
 
@@ -13,5 +15,6 @@ public class Program {
         test(")()())", 4);
         test("", 0);
         test(")(", 0);
+        test("()(()", 2);
     }
 }
