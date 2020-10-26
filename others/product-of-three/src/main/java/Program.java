@@ -29,5 +29,10 @@ public class Program {
         test(32, null);
         test(64, new int[]{2, 4, 8});
         test(12345, new int[]{3, 5, 823});
+
+        System.out.println("stress test");
+
+        test(93995509, null);
+        test(390058573, null);
     }
 }
