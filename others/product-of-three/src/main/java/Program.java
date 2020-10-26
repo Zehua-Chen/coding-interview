@@ -9,8 +9,7 @@ public class Program {
             if (actual != null) {
                 System.out.printf(
                         "value = %d, actual = %s expected = null\n",
-                        value,
-                        Arrays.toString(actual));
+                        value, Arrays.toString(actual));
             }
 
             return;
@@ -19,9 +18,7 @@ public class Program {
         if (!Arrays.equals(actual, expected)) {
             System.out.printf(
                     "value = %d, actual = %s, expected = %s\n",
-                    value,
-                    Arrays.toString(actual),
-                    Arrays.toString(expected));
+                    value, Arrays.toString(actual), Arrays.toString(expected));
         }
     }
 

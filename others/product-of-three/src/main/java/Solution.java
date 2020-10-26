@@ -2,14 +2,19 @@ import java.util.*;
 
 public class Solution {
     /**
-     * Find minimum divisor for a given value
+     * Find minimum divisor for a given value such that after taking out the found divisor, there
+     * are still divisors bigger than or equal to the found divisor
      *
      * @param value    the value in question
      * @param excludes numbers that we don't consider
      * @return the minimum divisor if there is one; -1 otherwise
      */
     private int findMinDivisor(int value, Set<Integer> excludes) {
-        for (int candidate = 1; candidate <= value; candidate++) {
+        // if candidate * candidate <= value is reached and we still haven't had a divisor,
+        // then even if there is a divisor beyond this candidate, the remaining divisors available
+        // after taking out this potential divisor would be smaller than the potential divisor
+        // which is not what we want
+        for (int candidate = 1; candidate * candidate <= value; candidate++) {
             if ((value % candidate) != 0) {
                 continue;
             }
@@ -41,7 +46,17 @@ public class Solution {
         // Source: http://codeforces.com/blog/entry/73274
 
         int a = findMinDivisor(value, Set.of(1));
+
+        if (a == -1) {
+            return null;
+        }
+
         int b = findMinDivisor(value / a, Set.of(a, 1));
+
+        if (b == -1) {
+            return null;
+        }
+
         int c = value / (a * b);
 
         if (c != a && c != b && c != 1) {
