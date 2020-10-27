@@ -20,7 +20,7 @@ public class Solution {
             return eraseZeros(s, start + 1, total + 1);
         }
 
-        // consecutive calls may return -1
+        // consecutive calls may return 0
         return Math.max(total, eraseZeros(s, start + 1, total));
     }
 
