@@ -3,5 +3,5 @@ plugins {
 }
 
 application {
-    mainClassName = 'Program'
+    mainClassName = 'p007.Program'
 }

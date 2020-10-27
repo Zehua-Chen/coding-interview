@@ -1,4 +1,6 @@
-import java.util.*;
+package p006;
+
+import java.util.Arrays;
 
 public class Program {
     public static void test(int value, int[] expected) {
