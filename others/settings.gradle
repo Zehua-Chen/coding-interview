@@ -1,2 +1,3 @@
 include ':006-product-of-three'
 include ':007-erasing-zeros'
+include ':008-prime-factorization'
