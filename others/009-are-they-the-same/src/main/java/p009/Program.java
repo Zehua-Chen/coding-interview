@@ -3,19 +3,20 @@ package p009;
 import java.util.Arrays;
 
 public class Program {
-    public static void test(int[] a, int[] b, boolean expected) {
+    public static void test(int[] as, int[] bs, boolean expected) {
         var solution = new Solution();
-        boolean actual = solution.comp(a, b);
+        boolean actual = solution.comp(as, bs);
 
         if (actual != expected) {
             System.out.printf(
-                    "a = %s, b = %s, expected = %b, actual = %b\n",
-                    Arrays.toString(a), Arrays.toString(b), expected, actual);
+                    "as = %s, bs = %s, expected = %b, actual = %b\n",
+                    Arrays.toString(as), Arrays.toString(bs), expected, actual);
         }
     }
 
     public static void main(String[] args) {
         test(new int[]{}, new int[]{}, true);
+        test(new int[]{1, 2}, new int[]{}, false);
         test(new int[]{1, 2, 3}, new int[]{1, 4, 9}, true);
         test(new int[]{1, 2, 3}, new int[]{1, 4, 1}, false);
 
