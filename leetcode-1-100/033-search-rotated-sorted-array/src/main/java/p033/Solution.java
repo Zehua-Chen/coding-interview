@@ -31,6 +31,7 @@ public class Solution {
             return start;
         }
 
+        // prevent infinite loop caused by center
         if (start == end - 1) {
             if (nums[start] < nums[end]) {
                 return start;
@@ -74,6 +75,7 @@ public class Solution {
             return -1;
         }
 
+        // prevent infinite loop caused by center
         if (start == end - 1) {
             if (nums[start] == target) {
                 return start;
@@ -116,15 +118,17 @@ public class Solution {
         }
 
         if (beforeMin >= 0 && target == nums[beforeMin]) {
-            return min - 1;
+            return beforeMin;
         }
 
+        // search the smaller portion
         if (target > nums[min] && target <= nums[nums.length - 1]) {
             return search(nums, target, min, nums.length - 1);
         }
 
+        // search the bigger portion
         if (beforeMin >= 0 && target < nums[beforeMin] && target >= nums[0]) {
-            return search(nums, target, 0, min);
+            return search(nums, target, 0, beforeMin);
         }
 
         return -1;
