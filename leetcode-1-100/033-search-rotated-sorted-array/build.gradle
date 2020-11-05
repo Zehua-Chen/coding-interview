@@ -3,5 +3,6 @@ plugins {
 }
 
 application {
-    mainClassName = 'p033.Program'
+    mainClass = 'p033.Program'
+    applicationDefaultJvmArgs = ['-enableassertions']
 }
