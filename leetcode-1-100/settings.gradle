@@ -12,4 +12,5 @@ include ':030-substr-with-concat-all-words'
 include ':031-next-permutation'
 include ':032-longest-valid-parentheses'
 include ':033-search-rotated-sorted-array'
+include ':034-first-last-sorted-array'
 
