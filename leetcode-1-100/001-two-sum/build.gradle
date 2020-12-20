@@ -1,9 +1,9 @@
 plugins {
-    id 'application'
+    id "application"
 }
 
 application {
-    mainClassName = "Program"
+    mainClass.set("Program")
 }
 
 dependencies {

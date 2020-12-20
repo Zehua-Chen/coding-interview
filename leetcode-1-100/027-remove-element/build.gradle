@@ -3,5 +3,5 @@ plugins {
 }
 
 application {
-    mainClassName = "Program"
+    mainClass.set("Program")
 }
