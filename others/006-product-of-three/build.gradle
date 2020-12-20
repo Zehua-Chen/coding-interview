@@ -1,7 +1,7 @@
 plugins {
-    id 'application'
+    id "application"
 }
 
 application {
-    mainClassName = 'p006.Program'
+    mainClass.set("p006.Program")
 }
