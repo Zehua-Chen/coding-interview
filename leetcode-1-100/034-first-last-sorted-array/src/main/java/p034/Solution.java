@@ -14,14 +14,30 @@ public class Solution {
     private static final int[] ERROR = new int[]{-1, -1};
 
     /**
-     * Look for the start edge of the target region
-     * @param nums the array to search in, must not be null
-     * @param left left bound of the array
-     * @param right right bound of the array
+     * Which edge of the region are we looking for
+     */
+    private enum Edge {
+        /**
+         * Find start edge
+         */
+        START,
+        /**
+         * Find end edge
+         */
+        END
+    }
+
+    /**
+     * Look for an edge of the target region
+     *
+     * @param nums   the array to search in, must not be null
+     * @param left   left bound of the array
+     * @param right  right bound of the array
      * @param target the value which make up the number region in question
+     * @param edge   the edge to find
      * @return the start edge, if any. Otherwise, return null
      */
-    private Integer start(int[] nums, int left, int right, int target) {
+    private Integer search(int[] nums, int left, int right, int target, Edge edge) {
         assert nums != null;
 
         if (left > right) {
@@ -33,15 +49,28 @@ public class Solution {
         // left(0, 0) would complete
         // left(0, 1) would cause infinite recursion
         if (right - left == 1) {
-            if (nums[left] == target) {
-                return left;
-            }
+            switch (edge) {
+                case START -> {
+                    if (nums[left] == target) {
+                        return left;
+                    }
+                    if (nums[right] == target) {
+                        return right;
+                    }
 
-            if (nums[right] == target) {
-                return right;
-            }
+                    return null;
+                }
+                case END -> {
+                    if (nums[right] == target) {
+                        return right;
+                    }
+                    if (nums[left] == target) {
+                        return left;
+                    }
 
-            return null;
+                    return null;
+                }
+            }
         }
 
         if (left == right) {
@@ -55,84 +84,35 @@ public class Solution {
         int mid = ((right - left) / 2) + left;
 
         if (nums[mid] > target) {
-            return start(nums, left, mid, target);
+            return search(nums, left, mid, target, edge);
         }
 
         if (nums[mid] < target) {
-            return start(nums, mid, right, target);
+            return search(nums, mid, right, target, edge);
         }
 
-        Integer leftResult = start(nums, left, mid, target);
-        Integer rightResult = start(nums, mid, right, target);
+        Integer leftResult = search(nums, left, mid, target, edge);
+        Integer rightResult = search(nums, mid, right, target, edge);
 
         // Prefer to use left, since we are looking for the left edge
-        if (leftResult != null) {
-            return leftResult;
-        }
+        switch (edge) {
+            case START -> {
+                if (leftResult != null) {
+                    return leftResult;
+                }
 
-        return rightResult;
-    }
-
-    /**
-     * Look for the end edge of the target region.
-     *
-     * This method only differs from `start` in that it prefers the right hand side result.
-     * @param nums the array to search in, must not be null
-     * @param left left bound of the array
-     * @param right right bound of the array
-     * @param target the value which make up the number region in question
-     * @return the end edge, if any. Otherwise, return null
-     */
-    private Integer end(int[] nums, int left, int right, int target) {
-        assert nums != null;
-
-        if (left > right) {
-            return null;
-        }
-
-        // Consider left == 0, right == 1
-        // Mid would be calculated as (1 - 0) / 2 + 0 = 0
-        // right(0, 0) would complete
-        // right(0, 1) would cause infinite recursion
-        if (right - left == 1) {
-            if (nums[right] == target) {
-                return right;
+                return rightResult;
             }
+            case END -> {
+                if (rightResult != null) {
+                    return rightResult;
+                }
 
-            if (nums[left] == target) {
-                return left;
+                return leftResult;
             }
-
-            return null;
         }
 
-        if (left == right) {
-            if (nums[left] == target) {
-                return left;
-            }
-
-            return null;
-        }
-
-        int mid = ((right - left) / 2) + left;
-
-        if (nums[mid] > target) {
-            return end(nums, left, mid, target);
-        }
-
-        if (nums[mid] < target) {
-            return end(nums, mid, right, target);
-        }
-
-        Integer leftResult = end(nums, left, mid, target);
-        Integer rightResult = end(nums, mid, right, target);
-
-        // Prefer to use right, since we are looking for the right edge
-        if (rightResult != null) {
-            return rightResult;
-        }
-
-        return leftResult;
+        return null;
     }
 
     public int[] searchRange(int[] nums, int target) {
@@ -144,8 +124,8 @@ public class Solution {
             return ERROR;
         }
 
-        Integer start = start(nums, 0, nums.length - 1, target);
-        Integer end = end(nums, 0, nums.length - 1, target);
+        Integer start = search(nums, 0, nums.length - 1, target, Edge.START);
+        Integer end = search(nums, 0, nums.length - 1, target, Edge.END);
 
         if (start == null && end == null) {
             return ERROR;
