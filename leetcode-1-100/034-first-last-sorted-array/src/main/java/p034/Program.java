@@ -20,6 +20,7 @@ public class Program {
     }
 
     public static void main(String[] args) {
+        test(new int[]{1, 2, 3}, 2, new int[]{1, 1});
         test(new int[]{5, 7, 7, 8, 8, 10}, 8, new int[]{3, 4});
         test(new int[]{5, 7, 7, 8, 8, 10}, 6, new int[]{-1, -1});
         test(new int[]{}, 0, new int[]{-1, -1});
