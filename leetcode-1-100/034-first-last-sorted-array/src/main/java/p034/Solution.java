@@ -83,18 +83,20 @@ public class Solution {
 
         int mid = ((right - left) / 2) + left;
 
+        // When the target region is to the left
         if (nums[mid] > target) {
             return search(nums, left, mid, target, edge);
         }
 
+        // When the target region is to the right
         if (nums[mid] < target) {
             return search(nums, mid, right, target, edge);
         }
 
+        // When we have landed in the target region
         Integer leftResult = search(nums, left, mid, target, edge);
         Integer rightResult = search(nums, mid, right, target, edge);
 
-        // Prefer to use left, since we are looking for the left edge
         switch (edge) {
             case START -> {
                 if (leftResult != null) {
