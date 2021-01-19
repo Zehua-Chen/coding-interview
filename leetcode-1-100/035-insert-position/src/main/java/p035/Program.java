@@ -31,5 +31,9 @@ public final class Program {
 
         // edge cases
         test(new int[] {}, 0, 0);
+
+        // custom cases
+        test(new int[] {0, 1, 2, 3}, 2, 2);
+        test(new int[] {0, 1, 3, 4}, 2, 2);
     }
 }
