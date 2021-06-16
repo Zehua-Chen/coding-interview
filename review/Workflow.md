@@ -1,6 +1,6 @@
 # Workflow
 
-0. Understand the problem, get the edge cases
-1. Come up with a conceptual solution
-2. Write detailed solution
-2. Add edge cases
+1. Understand the problem, get the edge cases
+2. Come up with a conceptual solution
+3. Write detailed solution
+4. Add edge cases

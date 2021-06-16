@@ -7,7 +7,7 @@
 
 ## How to Detect Overflow in C++
 
-````cpp
+```cpp
 #include <iostream>
 
 using std::cout;
@@ -62,4 +62,4 @@ int main()
 
   return 0;
 }
-````
+```

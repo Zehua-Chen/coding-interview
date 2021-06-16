@@ -19,8 +19,8 @@ for (size_t i = start; i < nums.size(); i++) {
 ```
 
 - If the loop is the outer most loop, `start = 0`
-- If the loop is a nested loop, `start = x + 1`, where `x` is the index
-  of the parent loop
+- If the loop is a nested loop, `start = x + 1`, where `x` is the index of the
+  parent loop
 
 ## Two Pointer Search
 
