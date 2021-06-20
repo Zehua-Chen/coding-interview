@@ -2,7 +2,7 @@
 
 ## Directory Structure
 
-- [others](others/): other problems
+- [problems](problems/): coding problems
 - [review](review/): review for coding interviews
 
 ## Review Priority
