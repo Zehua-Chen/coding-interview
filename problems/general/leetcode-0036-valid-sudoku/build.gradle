@@ -1,0 +1,8 @@
+plugins {
+    id "application"
+}
+
+application {
+    mainClass.set("p0036.Program")
+    applicationDefaultJvmArgs = ["-enableassertions"]
+}

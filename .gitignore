@@ -119,6 +119,11 @@ bin/
 **/build/
 !src/**/build/
 
+# Don't commit gradle executable
+gradlew
+gradle/
+gradlew.bat
+
 # Ignore Gradle GUI config
 gradle-app.setting
 
