@@ -15,5 +15,6 @@ public class Program {
     public static void main(String[] args) {
         test("abc", true);
         test("abb", false);
+        test("aBA", true);
     }
 }
