@@ -8,7 +8,7 @@ public class Solution {
      *
      * @param original the original string
      * @param candidate the string that can be the permutation
-     * @return true if candidate is the permutatino of original
+     * @return true if candidate is the permutation of original
      */
     public boolean isPermutation(String original, String candidate) {
         char[] originalChars = original.toCharArray();
