@@ -1,3 +1,2 @@
 allprojects {
-    apply(plugin = "java")
 }
