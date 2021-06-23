@@ -1,29 +1,22 @@
 package cci.s1.p3;
 
-import java.util.*;
-
 public class Solution {
     public char[] urlify(char[] s, int length) {
-        var buffer = new LinkedList<Character>();
+        int write = s.length - 1;
+        int read = length - 1;
 
-        for (int i = 0; i < length; i++) {
-            char c = s[i];
+        while (write >= 0) {
+            char c = s[read--];
 
             if (c == ' ') {
-                buffer.add('%');
-                buffer.add('2');
-                buffer.add('0');
+                s[write--] = '0';
+                s[write--] = '2';
+                s[write--] = '%';
 
                 continue;
             }
 
-            buffer.add(c);
-        }
-
-        assert buffer.size() <= s.length;
-
-        for (int i = 0; i < s.length; i++) {
-            s[i] = buffer.pop();
+            s[write--] = c;
         }
 
         return s;
