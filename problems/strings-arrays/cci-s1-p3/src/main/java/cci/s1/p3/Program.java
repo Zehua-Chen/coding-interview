@@ -16,7 +16,7 @@ public class Program {
         char[] inputArray = new char[expected.length()];
         copy(inputArray, input);
 
-        String actual = new String(solution.urlify(input.toCharArray(), input.length()));
+        String actual = new String(solution.urlify(inputArray, input.length()));
 
         if (!actual.equals(expected)) {
             out.printf(
@@ -26,7 +26,9 @@ public class Program {
     }
 
     public static void main(String[] args) {
+        test("a b", "a%20b");
         test("Mr John Smith", "Mr%20John%20Smith");
+        test("a  b", "a%20%20b");
         test("abc", "abc");
     }
 }

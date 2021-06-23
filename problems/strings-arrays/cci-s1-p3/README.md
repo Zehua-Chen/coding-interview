@@ -7,3 +7,6 @@ write a method to replace all spaces in string with a `%20`.
 - You are given to the true length of the string (ex. `a b` has length 3)
 
 ## Questions that Should be Asked
+
+1. How about empty strings? Should I give a `%20`
+2. How about consecutive white spaces?
