@@ -1,8 +1,0 @@
-plugins {
-    id "application"
-}
-
-application {
-    mainClass.set("cci.s1.p3.Program")
-    applicationDefaultJvmArgs = ["-enableassertions"]
-}
