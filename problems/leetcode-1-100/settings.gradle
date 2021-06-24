@@ -1,5 +1,5 @@
 include ":utils"
-project(":utils").projectDir = new File("../../shared/java/utils")
+project(":utils").projectDir = new File("../shared/java")
 
 include ":001-two-sum"
 include ":024-swap-nodes-pairs"
