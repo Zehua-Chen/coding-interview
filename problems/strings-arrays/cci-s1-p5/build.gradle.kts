@@ -5,6 +5,6 @@ plugins {
 }
 
 application {
-    mainClass.set("cci.s1.p4.Program")
+    mainClass.set("cci.s1.p5.Program")
     applicationDefaultJvmArgs = listOf("-enableassertions")
 }
