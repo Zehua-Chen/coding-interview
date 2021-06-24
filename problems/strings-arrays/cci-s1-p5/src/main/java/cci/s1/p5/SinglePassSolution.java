@@ -1,7 +1,8 @@
 package cci.s1.p5;
 
-public class BaselineSolution extends Solution {
-    boolean differentLength(String a, String b) {
+public class SinglePassSolution extends Solution {
+    @Override
+    public boolean areOneEditAway(String a, String b) {
         int aIndex = 0;
         int bIndex = 0;
 
@@ -24,35 +25,12 @@ public class BaselineSolution extends Solution {
                 aIndex++;
                 differences++;
             } else {
-                return false;
-            }
-        }
-
-        return differences <= 1;
-    }
-
-    boolean sameLength(String a, String b) {
-        int differences = 0;
-
-        for (int i = 0; i < a.length(); i++) {
-            if (a.charAt(i) != b.charAt(i)) {
+                aIndex++;
+                bIndex++;
                 differences++;
             }
         }
 
         return differences <= 1;
-    }
-
-    @Override
-    public boolean areOneEditAway(String a, String b) {
-        if (Math.abs(a.length() - b.length()) > 1) {
-            return false;
-        }
-
-        if (a.length() != b.length()) {
-            return differentLength(a, b);
-        }
-
-        return sameLength(a, b);
     }
 }

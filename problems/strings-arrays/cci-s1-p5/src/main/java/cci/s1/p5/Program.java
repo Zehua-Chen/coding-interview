@@ -14,7 +14,7 @@ public class Program {
     }
 
     static void test(String a, String b, boolean expected) {
-        var solutions = new Solution[] {new BaselineSolution()};
+        var solutions = new Solution[] {new BaselineSolution(), new SinglePassSolution()};
 
         for (Solution solution : solutions) {
             test(a, b, expected, solution);
@@ -24,7 +24,8 @@ public class Program {
     public static void main(String[] args) {
         test("pale", "ple", true);
         test("pales", "pale", true);
-        test("pales", "bale", true);
+        test("pale", "bale", true);
         test("pale", "bake", false);
+        test("abc", "bc", true);
     }
 }
