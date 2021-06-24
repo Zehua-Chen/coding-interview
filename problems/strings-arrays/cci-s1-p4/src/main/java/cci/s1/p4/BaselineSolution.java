@@ -3,35 +3,37 @@ package cci.s1.p4;
 import java.util.*;
 
 public class BaselineSolution extends Solution {
+    @Override
     public boolean isPalindromePermutation(String string) {
         char[] letters = string.toLowerCase().toCharArray();
         Arrays.sort(letters);
 
-        boolean singleFound = false;
+        boolean foundOdd = false;
 
         int i = 0;
 
         while (i < letters.length) {
+            int count = 0;
             char start = letters[i];
-            i++;
+            count++;
 
             if (start == ' ') {
+                i += count;
                 continue;
             }
 
-            boolean multiple = false;
-
-            while (i < letters.length && start == letters[i]) {
-                i++;
-                multiple = true;
+            while (i + count < letters.length && start == letters[i + count]) {
+                count++;
             }
 
-            if (!multiple) {
-                if (singleFound) {
+            i += count;
+
+            if (count % 2 != 0) {
+                if (foundOdd) {
                     return false;
                 }
 
-                singleFound = true;
+                foundOdd = true;
             }
         }
 
