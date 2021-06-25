@@ -61,5 +61,6 @@ public class Program {
 
     public static void main(String[] args) {
         test("/test1.txt");
+        test("/test2.txt");
     }
 }
