@@ -7,6 +7,7 @@
   - [Duplicated Work](#duplicated-work)
 - [Technique 2: DIY](#technique-2-diy)
 - [Technique 3: Simplify and Generalize](#technique-3-simplify-and-generalize)
+  - [Examples](#examples)
 - [Technique 4: Base Case and Build](#technique-4-base-case-and-build)
 - [Technique 5: Data Structure Brainstorm](#technique-5-data-structure-brainstorm)
 - [Best Conceivable Runtime](#best-conceivable-runtime)
@@ -39,6 +40,10 @@ Computation results can often be cached.
 
 Simplify the problem, solve the simplified problem and then apply the solution
 to the original problem.
+
+## Examples
+
+- [Cracking the Coding Interview 1.7](../problems/strings-arrays/cci-s1-p7/README.md)
 
 # Technique 4: Base Case and Build
 
