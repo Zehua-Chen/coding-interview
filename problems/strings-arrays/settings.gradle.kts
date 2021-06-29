@@ -8,5 +8,6 @@ include(
     "cci-s1-p4",
     "cci-s1-p5",
     "cci-s1-p6",
-    "cci-s1-p7"
+    "cci-s1-p7",
+    "cci-s1-p8"
 )
