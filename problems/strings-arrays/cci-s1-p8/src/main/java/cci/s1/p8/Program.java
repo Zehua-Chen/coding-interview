@@ -25,7 +25,7 @@ public class Program {
     }
 
     static void test(int[][] input, int[][] expected) {
-        var solutions = new Solution[] {new BaselineSolution()};
+        var solutions = new Solution[] {new BaselineSolution(), new InPlaceSolution()};
 
         for (Solution solution : solutions) {
             test(input, expected, solution);
@@ -55,5 +55,8 @@ public class Program {
 
     public static void main(String[] args) {
         test("/test1.txt");
+        test("/test2.txt");
+        test("/test3.txt");
+        test("/test4.txt");
     }
 }
