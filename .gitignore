@@ -112,7 +112,6 @@ venv.bak/
 .vscode
 
 # CXX
-test
 bin/
 
 .gradle
