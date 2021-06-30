@@ -2,7 +2,7 @@ package utils.lists;
 
 import java.util.*;
 
-public final class Node<E> {
+public final class Node<E> implements Cloneable {
     private Node<E> next;
     private E value;
 
@@ -21,6 +21,16 @@ public final class Node<E> {
 
     public Node(E value) {
         this.value = value;
+    }
+
+    public Node(Node<E> other) {
+        assert other != null;
+
+        value = other.value;
+
+        if (other.next != null) {
+            next = new Node<>(other.next);
+        }
     }
 
     public Node<E> getNext() {

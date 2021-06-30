@@ -1,10 +1,8 @@
 package utils.lists;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class NodeTests {
     @Test
@@ -21,6 +19,14 @@ public class NodeTests {
         head = head.getNext();
         assertNotNull(head);
         assertEquals(head.getValue(), 3);
+    }
+
+    @Test
+    public void copy() {
+        Node<Integer> list = Node.of(1, 2, 3);
+        Node<Integer> copy = new Node<>(list);
+
+        assertEquals(list, copy);
     }
 
     @Test
