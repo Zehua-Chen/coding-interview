@@ -1,4 +1,4 @@
-import utils.directed.ListNode;
+import utils.leetcode.ListNode;
 
 public class Program {
     public static void test(int k, ListNode head, ListNode expected) {

@@ -1,4 +1,4 @@
-import utils.directed.ListNode;
+import utils.leetcode.ListNode;
 
 class Solution {
     public ListNode swapPairs(ListNode head) {

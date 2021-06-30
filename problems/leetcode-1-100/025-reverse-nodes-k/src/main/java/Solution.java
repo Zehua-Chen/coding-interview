@@ -1,4 +1,4 @@
-import utils.directed.ListNode;
+import utils.leetcode.ListNode;
 
 public class Solution {
     private boolean hasLength(ListNode head, int k) {

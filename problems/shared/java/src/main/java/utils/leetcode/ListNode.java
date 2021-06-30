@@ -1,4 +1,4 @@
-package utils.directed;
+package utils.leetcode;
 
 public class ListNode {
     public int val;
