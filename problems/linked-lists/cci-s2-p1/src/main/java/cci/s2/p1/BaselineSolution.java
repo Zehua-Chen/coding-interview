@@ -4,7 +4,5 @@ import utils.lists.Node;
 
 public class BaselineSolution implements Solution {
     @Override
-    public Node<Integer> removeDuplicates(Node<Integer> head) {
-        return head;
-    }
+    public void removeDuplicates(Node<Integer> head) {}
 }
