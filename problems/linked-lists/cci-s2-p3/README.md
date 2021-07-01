@@ -7,5 +7,5 @@ necessarily the exact middle), of a singly linked list, given only access to tha
 ## Questions that Should be Asked
 
 1. What happens if not middle? (Assume: do nothing)
-    - End node is easy to detect
-    - Can't detect if it is first node
+   - End node is easy to detect; **We can't delete by overriding if we have the last node, either**
+   - Can't detect if it is first node
