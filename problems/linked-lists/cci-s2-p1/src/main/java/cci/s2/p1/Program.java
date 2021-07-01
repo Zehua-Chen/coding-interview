@@ -17,7 +17,7 @@ public class Program {
     }
 
     static void test(Node<Integer> input, Node<Integer> expected) {
-        var solutions = new Solution[] {new BaselineSolution()};
+        var solutions = new Solution[] {new BaselineSolution(), new NoBufferSolution()};
 
         for (Solution solution : solutions) {
             test(input, expected, solution);
