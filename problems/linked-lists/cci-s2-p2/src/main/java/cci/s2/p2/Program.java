@@ -8,7 +8,7 @@ public class Program {
     static void test(Node<Integer> head, int k, Integer expected, Solution solution) {
         Integer actual = solution.findLast(head, k);
 
-        if (!actual.equals(expected)) {
+        if (actual == null || !actual.equals(expected)) {
             out.printf(
                     "(%s) head = %s, k = %d, actual = %d, expected = %d\n",
                     solution.getClass().getName(), head, k, actual, expected);
@@ -16,7 +16,10 @@ public class Program {
     }
 
     static void test(Node<Integer> head, int k, Integer expected) {
-        var solutions = new Solution[] {new BaselineSolution()};
+        var solutions =
+                new Solution[] {
+                    new BaselineSolution(), new RecursiveSolution(), new IterativeSolution()
+                };
 
         for (Solution solution : solutions) {
             test(head, k, expected, solution);
