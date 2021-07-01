@@ -27,6 +27,7 @@ public class Program {
     public static void main(String[] args) {
         test(Node.of(1, 2, 3), Node.of(1, 2, 3));
         test(Node.of(1, 1, 1, 2, 3, 3), Node.of(1, 2, 3));
+        test(Node.of(1, 2, 1), Node.of(1, 2));
         test(Node.of(1, 1, 1), Node.of(1));
     }
 }
