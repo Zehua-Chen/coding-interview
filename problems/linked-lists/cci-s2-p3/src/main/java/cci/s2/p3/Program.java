@@ -18,7 +18,7 @@ public class Program {
     }
 
     static void test(Node<Integer> head, int middleIndex, Node<Integer> expected) {
-        var solutions = new Solution[] {new BaselineSolution()};
+        var solutions = new Solution[] {new FinalSolution()};
 
         for (Solution solution : solutions) {
             test(head, middleIndex, expected, solution);
