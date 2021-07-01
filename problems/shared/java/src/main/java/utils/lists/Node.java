@@ -50,6 +50,25 @@ public final class Node<E> implements Cloneable {
         this.value = value;
     }
 
+    public Node<E> get(int index) {
+        Node<E> current = this;
+
+        while (index > 0) {
+            if (current == null) {
+                throw new IndexOutOfBoundsException();
+            }
+
+            current = current.next;
+            index--;
+        }
+
+        if (current == null) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        return current;
+    }
+
     @Override
     public String toString() {
         var builder = new StringBuilder();

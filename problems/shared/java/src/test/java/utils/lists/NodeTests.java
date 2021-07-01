@@ -22,6 +22,17 @@ public class NodeTests {
     }
 
     @Test
+    public void get() {
+        Node<Integer> head = Node.of(1, 2, 3);
+
+        assertEquals(head.get(0).getValue(), 1);
+        assertEquals(head.get(1).getValue(), 2);
+        assertEquals(head.get(2).getValue(), 3);
+
+        assertThrows(IndexOutOfBoundsException.class, () -> System.out.println(head.get(3)));
+    }
+
+    @Test
     public void copy() {
         Node<Integer> list = Node.of(1, 2, 3);
         Node<Integer> copy = new Node<>(list);
