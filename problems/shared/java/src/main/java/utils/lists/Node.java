@@ -1,8 +1,8 @@
 package utils.lists;
 
-import java.util.*;
-
 public final class Node<E> implements Cloneable {
+    private static final ConcurrentCycleDetector cycleDetector = new ConcurrentCycleDetector();
+
     private Node<E> next;
     private E value;
 
@@ -71,6 +71,7 @@ public final class Node<E> implements Cloneable {
 
     @Override
     public String toString() {
+        checkCircle();
         var builder = new StringBuilder();
 
         builder.append("Node(");
@@ -112,6 +113,33 @@ public final class Node<E> implements Cloneable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(next, value);
+        return super.hashCode();
+    }
+
+    private void checkCircle() {
+        cycleDetector.clear();
+
+        var builder = new StringBuilder();
+        Node<E> head = this;
+
+        builder.append("Node(");
+
+        while (head != null) {
+
+            if (cycleDetector.contains(head)) {
+                builder.append(head.value);
+                builder.append(")");
+
+                var message = String.format("Loop detected in %s", builder);
+
+                throw new RuntimeException(message);
+            }
+
+            builder.append(head.value);
+            builder.append("->");
+
+            cycleDetector.add(head);
+            head = head.next;
+        }
     }
 }
