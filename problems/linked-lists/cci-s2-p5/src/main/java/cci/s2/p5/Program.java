@@ -21,5 +21,10 @@ public class Program {
         test(Node.of(7, 1, 6), Node.of(5, 9, 2), Node.of(2, 1, 9), new ReverseSolution());
         test(Node.of(7, 1, 6), Node.of(5, 9, 2, 1), Node.of(2, 1, 9, 1), new ReverseSolution());
         test(Node.of(7, 1, 6, 1), Node.of(5, 9, 2), Node.of(2, 1, 9, 1), new ReverseSolution());
+
+        // forward order
+        test(Node.of(6, 1, 7), Node.of(2, 9, 5), Node.of(9, 1, 2), new ForwardSolution());
+        test(Node.of(6, 1, 7), Node.of(1, 2, 9, 5), Node.of(1, 9, 1, 2), new ForwardSolution());
+        test(Node.of(1, 6, 1, 7), Node.of(2, 9, 5), Node.of(1, 9, 1, 2), new ForwardSolution());
     }
 }
