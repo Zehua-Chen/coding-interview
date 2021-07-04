@@ -1,4 +1,4 @@
-package p0036;
+package leetcode.p0036;
 
 import java.util.*;
 

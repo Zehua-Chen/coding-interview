@@ -4,6 +4,6 @@ plugins {
 }
 
 application {
-    mainClass.set("p0036.Program")
+    mainClass.set("leetcode.p0036.Program")
     applicationDefaultJvmArgs = listOf("-enableassertions")
 }

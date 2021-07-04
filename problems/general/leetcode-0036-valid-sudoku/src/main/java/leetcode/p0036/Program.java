@@ -1,6 +1,6 @@
-package p0036;
+package leetcode.p0036;
 
-import static java.lang.System.out;
+import static java.lang.System.*;
 
 public class Program {
     public static void main(String[] args) {

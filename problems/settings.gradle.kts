@@ -11,6 +11,7 @@ fun includeDir(dir: String) {
 include("utils")
 
 includeDir("general")
+includeDir("greedy")
 includeDir("strings-arrays")
 includeDir("linked-lists")
 includeDir("recursion-dp")
