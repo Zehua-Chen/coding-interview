@@ -1,4 +1,4 @@
-# Cracking the Coding Interview 2.5
+# Cracking the Coding Interview 2.6
 
 **Sum Lists**
 You have two numbers represented by a linked list, where each node contains a single digit. The
