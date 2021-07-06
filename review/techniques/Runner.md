@@ -7,5 +7,6 @@ Two pointers, iterating through a list
 
 # Examples
 
-- [Cracking the Coding Interview 2.1](../../problems/linked-lists/cci-s2-p1/README.md)
-- [Cracking the Coding Interview 2.2](../../problems/linked-lists/cci-s2-p2/README.md)
+- [Cracking the Coding Interview 2.1: Remove Dups](../../problems/linked-lists/cci-s2-p1-remove-dups/README.md)
+- [Cracking the Coding Interview 2.2: Remove Kth to Last](../../problems/linked-lists/cci-s2-p2-remove-kth-last/README.md)
+- [Cracking the Coding Interview 2.6: Palindrome](../../problems/linked-lists/cci-s2-p6-palindrome/README.md)

@@ -1,3 +1,7 @@
 package cci.s2.p6;
 
-public class Solution {}
+import utils.lists.Node;
+
+public interface Solution {
+    boolean isPalindrome(Node<Character> head);
+}
