@@ -19,7 +19,8 @@ include(
     "linked-lists:cci-s2-p3-remove-middle-node",
     "linked-lists:cci-s2-p4-partition",
     "linked-lists:cci-s2-p5-sum-lists",
-    "linked-lists:cci-s2-p6-palindrome"
+    "linked-lists:cci-s2-p6-palindrome",
+    "linked-lists:cci-s2-p7-intersection",
 )
 
 include(

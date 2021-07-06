@@ -43,7 +43,8 @@ to the original problem.
 
 ## Examples
 
-- [Cracking the Coding Interview 1.7](../problems/strings-arrays/cci-s1-p7/README.md)
+- [Cracking the Coding Interview 1.7: Rotate Matrix](../problems/strings-arrays/cci-s1-p7-rotate-matrix/README.md)
+- [Cracking the Coding Interview 2.7: Intersection](../problems/linked-lists/cci-s2-p7-intersection/README.md)
 
 # Technique 4: Base Case and Build
 
