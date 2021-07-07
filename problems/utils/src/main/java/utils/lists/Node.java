@@ -90,6 +90,12 @@ public final class Node<E> implements Cloneable {
         return builder.toString();
     }
 
+    /**
+     * Deeply determine if two lists are the same
+     *
+     * @param o the other node
+     * @return true if the lists are deeply equal
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
