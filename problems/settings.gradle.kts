@@ -25,6 +25,10 @@ include(
 )
 
 include(
+    "stacks-queues:cci-s3-p1-three-in-one"
+)
+
+include(
     "recursion-dp:leetcode-0037-sudoku-solver",
     "recursion-dp:leetcode-0038-count-say"
 )
