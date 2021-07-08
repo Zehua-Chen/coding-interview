@@ -12,4 +12,4 @@ Implement a function `popAt(int index)` which performs a pop operation on a spec
 
 ## Questions that Should be Asked
 
-- `popAt(int index)` should transfer elements from nearby stacks? (Assumes yes)
+- `popAt(int index)` should preserve ordering? (Assumes yes)
