@@ -27,6 +27,7 @@ include(
 include(
     "stacks-queues:cci-s3-p1-three-in-one",
     "stacks-queues:cci-s3-p2-stack-min",
+    "stacks-queues:cci-s3-p3-stack-of-plates",
 )
 
 include(
