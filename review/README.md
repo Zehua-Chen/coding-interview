@@ -50,6 +50,9 @@ In addition to what's included in the infographics:
 
 See more at [Optimizations.md](Optimizations.md)
 
+- Sometimes there is no best solution. It's important to point out the tradeoff
+  of different solutions
+
 # Implement
 
 You need to demonstrate that you can write good code. Good code has the

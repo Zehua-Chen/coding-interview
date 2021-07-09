@@ -2,7 +2,7 @@ package cci.s3.p6;
 
 import java.util.*;
 
-public class BaselineShelter implements AnimalShelter {
+public class FinalShelter implements AnimalShelter {
     private static record AnimalEntry(Animal animal, int arrivalTime) {
     }
 

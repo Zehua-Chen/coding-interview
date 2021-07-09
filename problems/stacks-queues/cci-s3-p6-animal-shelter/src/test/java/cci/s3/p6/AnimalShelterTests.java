@@ -10,7 +10,7 @@ import static org.junit.jupiter.params.provider.Arguments.*;
 
 public class AnimalShelterTests {
     public static Stream<Arguments> implementations() {
-        return Stream.of(arguments(new BaselineShelter()));
+        return Stream.of(arguments(new FinalShelter()));
     }
 
     @ParameterizedTest
