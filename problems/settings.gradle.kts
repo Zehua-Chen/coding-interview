@@ -36,7 +36,8 @@ include(
 
 include(
     "recursion-dp:leetcode-0037-sudoku-solver",
-    "recursion-dp:leetcode-0038-count-say"
+    "recursion-dp:leetcode-0038-count-say",
+    "recursion-dp:leetcode-0039-combination-sum",
 )
 
 include("greedy:leetcode-1921-max-monsters")
