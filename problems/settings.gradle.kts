@@ -11,6 +11,7 @@ include(
     "strings-arrays:cci-s1-p6-string-compression",
     "strings-arrays:cci-s1-p7-rotate-matrix",
     "strings-arrays:cci-s1-p8-zero-matrix",
+    "strings-arrays:leetcode-0001-two-sum"
 )
 
 include(

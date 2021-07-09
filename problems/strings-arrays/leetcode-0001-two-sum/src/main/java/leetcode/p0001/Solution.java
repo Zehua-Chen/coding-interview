@@ -1,3 +1,5 @@
+package leetcode.p0001;
+
 import java.util.*;
 
 public class Solution {
@@ -14,10 +16,10 @@ public class Solution {
             int diff = target - num;
 
             if (indices.containsKey(diff) && indices.get(diff) != i) {
-                return new int[]{i, indices.get(diff)};
+                return new int[] {i, indices.get(diff)};
             }
         }
 
-        return new int[]{0, 0};
+        return new int[] {0, 0};
     }
 }
