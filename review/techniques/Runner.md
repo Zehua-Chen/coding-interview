@@ -11,3 +11,4 @@ Two pointers, iterating through a list
 - [Cracking the Coding Interview 2.2: Remove Kth to Last](../../problems/linked-lists/cci-s2-p2-remove-kth-last/README.md)
 - [Cracking the Coding Interview 2.6: Palindrome](../../problems/linked-lists/cci-s2-p6-palindrome/README.md)
 - [Cracking the Coding Interview 2.8: Loop Detection](../../problems/linked-lists/cci-s2-p8-loop-detection/README.md)
+- [Leetcode 0042: Trapping Rain Water](../../problems/strings-arrays/leetcode-0042-trapping-water/README.md)

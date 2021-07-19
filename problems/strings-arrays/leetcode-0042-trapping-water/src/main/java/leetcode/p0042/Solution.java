@@ -9,6 +9,10 @@ public class Solution {
         int leftMax = 0;
         int rightMax = 0;
 
+        // The essence of the problem is to find g(i) = min(max(H[1..i]), max(H[i..n]))
+        // max(H[1..i]) and max(H[i..n]) are all non-decreasing lines.
+        //
+        // This can be solved using the lower envelope technique
         while (left < right) {
             if (height[left] < height[right]) {
                 if (height[left] >= leftMax) {
