@@ -14,6 +14,7 @@ include(
     "strings-arrays:leetcode-0001-two-sum",
     "strings-arrays:leetcode-0041-missing-positive",
     "strings-arrays:leetcode-0042-trapping-water",
+    "strings-arrays:leetcode-0043-multiply-strings",
 )
 
 include(
