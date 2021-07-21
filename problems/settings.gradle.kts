@@ -42,6 +42,7 @@ include(
     "recursion-dp:leetcode-0038-count-say",
     "recursion-dp:leetcode-0039-combination-sum",
     "recursion-dp:leetcode-0040-combination-sum-2",
+    "recursion-dp:leetcode-0044-wildcard-matching",
 )
 
 include("greedy:leetcode-1921-max-monsters")
