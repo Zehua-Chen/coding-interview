@@ -44,6 +44,7 @@ include(
     "recursion-dp:leetcode-0040-combination-sum-2",
     "recursion-dp:leetcode-0044-wildcard-matching",
     "recursion-dp:leetcode-0045-jump-game-2",
+    "recursion-dp:leetcode-0046-permutations",
 )
 
 include("greedy:leetcode-1921-max-monsters")
