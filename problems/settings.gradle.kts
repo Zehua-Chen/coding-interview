@@ -48,4 +48,8 @@ include(
     "recursion-dp:leetcode-0047-permutations-2",
 )
 
+include(
+    "sorting-searching:leetcode-0049-group-anagrams"
+)
+
 include("greedy:leetcode-1921-max-monsters")
