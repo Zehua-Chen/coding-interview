@@ -10,6 +10,7 @@
   - [Examples](#examples)
 - [Technique 4: Base Case and Build](#technique-4-base-case-and-build)
 - [Technique 5: Data Structure Brainstorm](#technique-5-data-structure-brainstorm)
+- [Technique 6: Take Advantage of Constraints](#technique-6-take-advantage-of-constraints)
 - [Best Conceivable Runtime](#best-conceivable-runtime)
 
 # Technique 1: BUD
@@ -57,6 +58,12 @@ previous solutions
 Try each data structure and see if it make sense for the problem
 
 - Requires practice to develop an instinct
+
+# Technique 6: Take Advantage of Constraints
+
+Some constraints can provide tips for optimizations
+
+- [Leetcode 49: Group Anagrams](../problems/sorting-searching/leetcode-0049-group-anagrams/README.md)
 
 # Best Conceivable Runtime
 

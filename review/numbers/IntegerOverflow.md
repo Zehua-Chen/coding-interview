@@ -1,11 +1,12 @@
-# Integer Overflow
+# Overview
 
 - **Rule of thumb**: always use at least `long` for calculating sum.
 
 - max of int of x bits: `(2 ** (x - 1)) - 1`
 - min of int of x bits: `(2 ** (x - 1)) * -1`
+- `Integer.MIN_VALUE == Integer.MIN_VALUE * -1`
 
-## How to Detect Overflow in C++
+# Overflow Detection
 
 ```cpp
 #include <iostream>
