@@ -50,6 +50,7 @@ include(
     "recursion-dp:leetcode-0045-jump-game-2",
     "recursion-dp:leetcode-0046-permutations",
     "recursion-dp:leetcode-0047-permutations-2",
+    "recursion-dp:leetcode-0051-n-queens",
 )
 
 include(
