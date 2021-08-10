@@ -15,6 +15,7 @@ include(
     "strings-arrays:leetcode-0041-missing-positive",
     "strings-arrays:leetcode-0042-trapping-water",
     "strings-arrays:leetcode-0043-multiply-strings",
+    "strings-arrays:leetcode-0053-max-subarray",
 )
 
 include(
