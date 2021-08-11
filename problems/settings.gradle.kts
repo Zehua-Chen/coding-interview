@@ -59,7 +59,8 @@ include(
 
 include(
     "sorting-searching:leetcode-0049-group-anagrams",
-    "sorting-searching:leetcode-0056-merge-intervals"
+    "sorting-searching:leetcode-0056-merge-intervals",
+    "sorting-searching:leetcode-0057-insert-interval"
 )
 
 include("greedy:leetcode-1921-max-monsters")
