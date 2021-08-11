@@ -17,6 +17,7 @@ include(
     "strings-arrays:leetcode-0043-multiply-strings",
     "strings-arrays:leetcode-0053-max-subarray",
     "strings-arrays:leetcode-0054-spiral-matrix",
+    "strings-arrays:leetcode-0058-length-last-word",
 )
 
 include(
