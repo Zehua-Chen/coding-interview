@@ -1,6 +1,9 @@
 include("utils")
 
-include("general:leetcode-0036-valid-sudoku")
+include(
+    "general:leetcode-0036-valid-sudoku",
+    "general:leetcode-0060-permutation-sequence"
+)
 
 include(
     "strings-arrays:cci-s1-p1-is-unique",
