@@ -33,6 +33,7 @@ include(
     "linked-lists:cci-s2-p6-palindrome",
     "linked-lists:cci-s2-p7-intersection",
     "linked-lists:cci-s2-p8-loop-detection",
+    "linked-lists:leetcode-0061-rotate-list",
 )
 
 include(
