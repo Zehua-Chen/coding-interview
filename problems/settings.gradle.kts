@@ -61,6 +61,7 @@ include(
     "recursion-dp:leetcode-0051-n-queens",
     "recursion-dp:leetcode-0052-n-queens-2",
     "recursion-dp:leetcode-0055-jump-game",
+    "recursion-dp:leetcode-0062-unique-paths",
 )
 
 include(
