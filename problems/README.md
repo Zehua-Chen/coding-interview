@@ -9,3 +9,4 @@
 - [Leetcode 0067: Add Binary](general/leetcode-0067-add-binary/)
 - [Leetcode 0068: Text Justification](general/leetcode-0068-text-justification/README.md)
 - [Leetcode 0069: Sqrt](math-logic-puzzles/leetcode-0069-sqrt/README.md)
+- [Leetcode 0070: Climbing Stairs](recursion-dp/leetcode-0070-climb-stairs/README.md)
