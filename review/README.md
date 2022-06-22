@@ -21,6 +21,7 @@ The content of this document supplements the contents of
 - **Language**:
   - Abbreviate code while using verbose languages like Java
   - Avoid languages like C++ that lead to hidden problems (pointers, templates)
+- **Communication**: keep talking to the interviewer on what you are thinking
 
 # Listening
 
