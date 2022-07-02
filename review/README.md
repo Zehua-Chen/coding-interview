@@ -1,16 +1,15 @@
-# Table of Contents
+- [Interview](#interview)
+  - [Listening](#listening)
+  - [Examples](#examples)
+  - [State a Brute Force](#state-a-brute-force)
+  - [Optimziation](#optimziation)
+  - [Implement](#implement)
+    - [Functional Programming](#functional-programming)
+    - [Specific Ways to Write Good Code](#specific-ways-to-write-good-code)
+  - [Test](#test)
+- [Knowledge](#knowledge)
 
-- [Table of Contents](#table-of-contents)
-- [Overview](#overview)
-- [Listening](#listening)
-- [Examples](#examples)
-- [State a Brute Force](#state-a-brute-force)
-- [Optimziation](#optimziation)
-- [Implement](#implement)
-  - [Specific Ways to Write Good Code](#specific-ways-to-write-good-code)
-- [Test](#test)
-
-# Overview
+# Interview
 
 The content of this document supplements the contents of
 [Coding Skills](CodingSkills.pdf)
@@ -22,26 +21,27 @@ The content of this document supplements the contents of
   - Abbreviate code while using verbose languages like Java
   - Avoid languages like C++ that lead to hidden problems (pointers, templates)
 - **Communication**: keep talking to the interviewer on what you are thinking
+- [What to do when stuck](try/README.md)
 
-# Listening
+## Listening
 
 - Retain information about the questions. If a piece of information is not
   useful, it won't be in the question
 
-# Examples
+## Examples
 
 - Give examples that are
   - **Specific**: examples should consist of real data
   - **Sufficiently large**: most examples are too small, by 50%
   - **Not a special case**: special case can be deceiving
 
-# State a Brute Force
+## State a Brute Force
 
 - A brute force is a good starting points for discussion and optimization
 - If you are stuck, you don't want the interviewer to think that you cannot find
   the easy solution
 
-# Optimziation
+## Optimziation
 
 In addition to what's included in the infographics:
 
@@ -49,12 +49,12 @@ In addition to what's included in the infographics:
 2. Use a hash table
 3. Think about conceivable runtime
 
-See more at [Optimizations.md](Optimizations.md)
+See more at [Optimizations.md](optimizations/README.md)
 
 - Sometimes there is no best solution. It's important to point out the tradeoff
   of different solutions
 
-# Implement
+## Implement
 
 You need to demonstrate that you can write good code. Good code has the
 following characteristics
@@ -70,7 +70,12 @@ following characteristics
 - **Maintainable**: code can be easily changed to adoapt to changes by other
   developers and the initial developer
 
-## Specific Ways to Write Good Code
+### Functional Programming
+
+[Functional programming](functional/README.md) is a great technique to write
+code that is simple, readable and maintainable
+
+### Specific Ways to Write Good Code
 
 - Use **data structures** generously
 - **Modularize**: break code into smaller units that are
@@ -83,7 +88,7 @@ following characteristics
 - **Error check**: try to write asserts or `if`s or use a "TODO" or explain out
   loud to save time
 
-# Test
+## Test
 
 - **Conceptual test**: explain what each line does and see if it makes sense
 - **Weird looking code**: double check code like `x = length - 2` or `i = 1`
@@ -93,3 +98,11 @@ following characteristics
 - **Special cases and edge cases**
 
 Make sure to fix bugs in the best way possible.
+
+# Knowledge
+
+- [Algorithms](algorithms/README.md)
+- [Data Structures](data-structures/README.md)
+- [Graph](graphs/README.md)
+- [Numbers](numbers/README.md)
+- [Techniques](techniques/README.md)
