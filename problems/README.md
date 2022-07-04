@@ -17,3 +17,4 @@
 - [Leetcode 0075: Sort Colors](strings-arrays/leetcode-0075-sort-colors/README.md)
 - [Leetcode 0076: Minimum Window Substring](strings-arrays/leetcode-0076-min-window-substring/README.md)
 - [Leetcode 0077: Combinations](recursion-dp/leetcode-0077-combinations/README.md)
+- [Leetcode 0078: Subsets](recursion-dp/leetcode-0078-subsets/README.md)
