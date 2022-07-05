@@ -18,3 +18,4 @@
 - [Leetcode 0076: Minimum Window Substring](strings-arrays/leetcode-0076-min-window-substring/README.md)
 - [Leetcode 0077: Combinations](recursion-dp/leetcode-0077-combinations/README.md)
 - [Leetcode 0078: Subsets](recursion-dp/leetcode-0078-subsets/README.md)
+- [Leetcode 0079: Word Search](strings-arrays/leetcode-0079-word-search/README.md)
