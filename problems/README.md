@@ -5,6 +5,7 @@
 # Leetcode
 
 - [Leetcode 0026: Remove Duplicate from Sorted Array](strings-arrays/leetcode-0026-remove-duplicates-from-sorted/README.md)
+- [Leetcode 0033: Search Rotated Sorted Array](strings-arrays/leetcode-0033-search-rotated-sorted-array/README.md)
 - [Leetcode 0065: Valid Number](recursion-dp/leetcode-0065-valid-number/)
 - [Leetcode 0066: Plus One](general/leetcode-0066-plus-one/)
 - [Leetcode 0067: Add Binary](general/leetcode-0067-add-binary/)
@@ -21,3 +22,4 @@
 - [Leetcode 0078: Subsets](recursion-dp/leetcode-0078-subsets/README.md)
 - [Leetcode 0079: Word Search](strings-arrays/leetcode-0079-word-search/README.md)
 - [Leetcode 0080: Remove Duplicates from Sorted Array 2](strings-arrays/leetcode-0080-remove-duplicates-from-sorted-2/README.md)
+- [Leetcode 0081: Search Rotated Sorted Array 2](strings-arrays/leetcode-0081-search-rotated-sorted-array-2/README.md)
