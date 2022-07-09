@@ -24,3 +24,4 @@
 - [Leetcode 0080: Remove Duplicates from Sorted Array 2](strings-arrays/leetcode-0080-remove-duplicates-from-sorted-2/README.md)
 - [Leetcode 0081: Search Rotated Sorted Array 2](strings-arrays/leetcode-0081-search-rotated-sorted-array-2/README.md)
 - [Leetcode 0082: Remove Duplicates from Sorted List II](linked-lists/leetcode-0082-remove-duplicate-sorted-list-2/README.md)
+- [Leetcode 0083: Remove Duplicates from Sorted List](linked-lists/leetcode-0083-remove-duplicate-sorted-list/README.md)
