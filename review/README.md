@@ -30,10 +30,14 @@ The content of this document supplements the contents of
 
 ## Examples
 
-- Give examples that are
+- Give examples that are:
   - **Specific**: examples should consist of real data
   - **Sufficiently large**: most examples are too small, by 50%
   - **Not a special case**: special case can be deceiving
+- Problems:
+  - [Leetcode 273. Integer to English Words](https://leetcode.com/problems/integer-to-english-words/):
+    - Numbers in `11-19` are special cases
+    - Examples must go beyond `1,000` to cover the segment system of English
 
 ## State a Brute Force
 
