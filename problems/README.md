@@ -27,3 +27,4 @@
 - [Leetcode 0083: Remove Duplicates from Sorted List](linked-lists/leetcode-0083-remove-duplicate-sorted-list/README.md)
 - [Leetcode 0084: Largest Rectangle in Histogram](stacks-queues/leetcode-0084-largest-rectangle/README.md)
 - [Leetcode 0086: Partition List](linked-lists/leetcode-0086-partition-list/README.md)
+- [Leetcode 0088: Merge Sorted Array](strings-arrays/leetcode-0088-merge-sorted-array/README.md)
