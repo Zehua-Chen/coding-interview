@@ -1,3 +1,4 @@
+- [Knowledge](#knowledge)
 - [Interview](#interview)
   - [Listening](#listening)
   - [Examples](#examples)
@@ -6,8 +7,14 @@
   - [Implement](#implement)
     - [Functional Programming](#functional-programming)
     - [Specific Ways to Write Good Code](#specific-ways-to-write-good-code)
+    - [Common Mistakes](#common-mistakes)
   - [Test](#test)
-- [Knowledge](#knowledge)
+- [Knowledge](#knowledge-1)
+
+# Knowledge
+
+- Sorting algorithms
+- [Data structures](data-structures/README.md)
 
 # Interview
 
@@ -90,7 +97,14 @@ code that is simple, readable and maintainable
 - **Good variable names**
   - Abbreviate long variable name after the first usage to save time
 - **Error check**: try to write asserts or `if`s or use a "TODO" or explain out
-  loud to save time
+
+### Common Mistakes
+
+1. Edge cases
+   - Arrays can be null or have size 0
+2. Null pointers
+3. Uninitialized variables
+4. Integer overflow (`int`, `long`, `long long`)
 
 ## Test
 
