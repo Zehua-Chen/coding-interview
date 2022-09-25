@@ -28,3 +28,4 @@
 - [Leetcode 0084: Largest Rectangle in Histogram](stacks-queues/leetcode-0084-largest-rectangle/README.md)
 - [Leetcode 0086: Partition List](linked-lists/leetcode-0086-partition-list/README.md)
 - [Leetcode 0088: Merge Sorted Array](strings-arrays/leetcode-0088-merge-sorted-array/README.md)
+- [Leetcode 0089: Gray Code](math-logic-puzzles/leetcode-0089-gray-code/README.md)

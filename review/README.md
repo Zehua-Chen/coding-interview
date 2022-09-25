@@ -80,6 +80,7 @@ following characteristics
   - Implementation is easily understandable
 - **Maintainable**: code can be easily changed to adoapt to changes by other
   developers and the initial developer
+- Write an outline of code first
 
 ### Functional Programming
 
