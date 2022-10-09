@@ -51,6 +51,8 @@ The content of this document supplements the contents of
 - A brute force is a good starting points for discussion and optimization
 - If you are stuck, you don't want the interviewer to think that you cannot find
   the easy solution
+- In industry, some problems do not mathmetically sound or elegent solution. So
+  a brute force might be what the interviewer expects.
 
 ## Optimziation
 
