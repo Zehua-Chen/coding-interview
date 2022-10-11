@@ -30,3 +30,7 @@
 - [Leetcode 0088: Merge Sorted Array](strings-arrays/leetcode-0088-merge-sorted-array/README.md)
 - [Leetcode 0089: Gray Code](math-logic-puzzles/leetcode-0089-gray-code/README.md)
 - [Leetcode 0090: Subsets II](recursion-dp/leetcode-0090-subsets-2/README.md)
+
+# Code Signal
+
+- [Code Signal: Century from Year](general/codesignal-century-from-year/README.md)
