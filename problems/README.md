@@ -33,4 +33,6 @@
 
 # Code Signal
 
-- [Code Signal: Century from Year](general/codesignal-century-from-year/README.md)
+- [Code Signal: Century from Year](general/codesignal-centuryFromYear/README.md)
+- [Code Signal: Shape Area](recursion-dp/codesignal-shapeArea/README.md)
+- [Code Signal: Make Area Consecutive 2](general/codesignal-makeArrayConsecutive2/README.md)
